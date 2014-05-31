@@ -8,6 +8,18 @@ export default Ember.Controller.extend({
         else {
             this.send('search', this.get('searchQuery'));
         }
+    }),
+    isMenuOpen: false,
+    actions: {
+    	toggleMenu: function() {
+    		this.toggleProperty("isMenuOpen");
+    	},
+        query: function() {
+            var query = this.get('search');
+            this.transitionToRoute('search', query);
+        }
     })
 });
+
+
 

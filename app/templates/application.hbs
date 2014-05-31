@@ -1,26 +1,39 @@
-<header>
-    <h1>
+<header class="site-header">
+    <h1 class="logo">
         {{#link-to 'index'}}Donate STL{{/link-to}}
     </h1>
     {{input class="primary-search" type="search" value=searchQuery placeholder="Search all solicitations"}}
-    <nav>
-        <ul>
-            {{#if user.isLoggedIn}}
-                <li>
-                    <button {{action 'logout'}}>Log Out</button>
-                </li>
-                <li>
-                    {{#link-to 'user.edit' user}}Account{{/link-to}}
-                </li>
-            {{else}}
-                <li>
-                    <button {{action 'login'}}>Log In</button>
-                </li>
-                <li>
-                    {{#link-to 'users.new'}}Sign Up{{/link-to}}
-                </li>
-            {{/if}}
-        </ul>
+    <nav class="main-nav" >
+        <i class="fa fa-bars" {{action 'toggleMenu'}} {{bind-attr class="isMenuOpen:open"}}></i>
+        {{#if isMenuOpen}}
+            <div class="menu card">
+                {{#if user.isLoggedIn}}
+                    <ul>
+                        <li>
+                            <button {{action 'logout'}}>Log Out</button>
+                        </li>
+                        <li>
+                            {{#link-to 'user.edit' user}}Account{{/link-to}}
+                        </li>
+                    </ul>
+                {{else}}
+                    <div class="login-form">
+                        <div class="input-wrapper user">
+                            <input type="text" placeholder="Email Address">
+                        </div>
+                        <div class="input-wrapper password">
+                            <input type="password" placeholder="Password">
+                        </div>
+                        <button class="login" {{action 'login'}}>Log In / Sign Up</button>
+                        or log in with
+                        <div class="clear social-login"> 
+                            <button class="facebook"><i class="fa fa-facebook"></i>Facebook</button>
+                            <button class="twitter"><i class="fa fa-twitter"></i>Twitter</button>
+                        </div>
+                    </div>
+                {{/if}}
+            </div>
+        {{/if}}
     </nav>
 </header>
 

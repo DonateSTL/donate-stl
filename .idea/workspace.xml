@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="63a22717-de73-4391-9e4d-7889d941432c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/charities/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/application.hbs" afterPath="$PROJECT_DIR$/app/templates/application.hbs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/application.js" afterPath="$PROJECT_DIR$/app/controllers/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/charities/index.hbs" afterPath="$PROJECT_DIR$/app/templates/charities/index.hbs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/router.js" afterPath="$PROJECT_DIR$/app/router.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/solicitation.js" afterPath="$PROJECT_DIR$/app/models/solicitation.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/search.js" afterPath="$PROJECT_DIR$/app/controllers/search.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes/search.js" afterPath="$PROJECT_DIR$/app/routes/search.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="donatestl.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,21 +37,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="search.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="search.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/routes/search.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
-              <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+            <state vertical-scroll-proportion="0.14802632" vertical-offset="0" max-vertical-offset="608">
+              <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="search.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="search.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/search.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.049342107" vertical-offset="0" max-vertical-offset="608">
-              <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120">
+              <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -104,8 +101,8 @@
         <option value="$PROJECT_DIR$/app/models/solicitation.js" />
         <option value="$PROJECT_DIR$/app/router.js" />
         <option value="$PROJECT_DIR$/app/controllers/application.js" />
-        <option value="$PROJECT_DIR$/app/controllers/search.js" />
         <option value="$PROJECT_DIR$/app/templates/search.hbs" />
+        <option value="$PROJECT_DIR$/app/controllers/search.js" />
         <option value="$PROJECT_DIR$/app/routes/search.js" />
       </list>
     </option>
@@ -605,18 +602,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes/search.js">
+    <entry file="file://$PROJECT_DIR$/app/controllers/search.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
-          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120">
+          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/search.js">
+    <entry file="file://$PROJECT_DIR$/app/routes/search.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.049342107" vertical-offset="0" max-vertical-offset="608">
-          <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+        <state vertical-scroll-proportion="0.14802632" vertical-offset="0" max-vertical-offset="608">
+          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
           <folding />
         </state>
       </provider>
