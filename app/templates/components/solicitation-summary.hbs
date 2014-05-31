@@ -18,23 +18,33 @@
             <button {{action 'contact'}}>I&rsquo;d like to be contacted to work out the details</button>
         {{/unless}}{{/unless}}
         {{#if hasGiven}}
-            TODO YOU ARE AWESOME
+            <h5>You&rsquo;re Awesome!</h5>
+            <p>We&rsquo;ve sent you a confirmation email with directions to {{solicitation.charity.title}}.</p>
+            <a href="http://TODO.example.com/">Share</a>
+            <a href="http://TODO.example.com/">Tweet</a>
         {{/if}}
         {{#if hasRequestedContact}}
-            TODO REQUESTED CONTACT
+            <h5>{{solicitation.charity.title}} will be in touch!</h5>
         {{/if}}
     {{/if}}
     {{#if isSponsoring}}
         {{#if hasSponsored}}
-            TODO THANKS FOR SPONSORING
+            <h5>You&rsquo;re Awesome!</h5>
+            <a href="http://TODO.example.com/">Share</a>
+            <a href="http://TODO.example.com/">Tweet</a>
         {{else}}
-            {{input type="number" value=solicitation.value}}
+            <label>
+                Recommended amount
+                {{input type="number" value=solicitation.value}}
+            </label>
             <button {{action 'paypal' solicitation.value}}>Donate on PayPal</button>
         {{/if}}
     {{/if}}
     {{#if isBuying}}
         {{#if hasBought}}
-            TODO THANKS FOR BUYING
+            <h5>You&rsquo;re Awesome!</h5>
+            <a href="http://TODO.example.com/">Share</a>
+            <a href="http://TODO.example.com/">Tweet</a>
         {{/if}}
     {{/if}}
     <button {{action 'cancel'}}>{{cancelText}}</button>

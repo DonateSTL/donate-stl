@@ -40,9 +40,22 @@ export default Ember.Component.extend({
         sponsor: function() {
             this.set('isSponsoring', true);
         },
-        paypal: function(amount) {
+        paypal: function() {
             this.set('hasSponsored', true);
-            window.alert('TODO: Redirect to PayPal to donate $' + amount);
+
+            this.get('solicitation.charity').then(function() {
+                var link = 'https://www.paypal.com/cgi-bin/webscr' +
+                    '?cmd=_donations' +
+                    '&business=' + encodeURIComponent(this.get('solicitation.charity.paypalEmail')) +
+                    '&lc=US' +
+                    '&item_name=' + encodeURIComponent(this.get('solicitation.title') + ' for ' + this.get('solicitation.charity.title')) +
+                    '&amount=' + this.get('solicitation.value') +
+                    '&currency_code=USD' +
+                    '&no_note=0' +
+                    '&bn=PP-DonationsBF:btn_donateCC_LG.gif:NonHostedGuest'
+                ;
+                window.open(link);
+            }.bind(this));
         },
         buy: function() {
             this.set('isBuying', true);
