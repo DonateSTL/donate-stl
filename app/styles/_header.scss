@@ -1,0 +1,134 @@
+.site-header {
+	background: $black;
+	height: 50px;
+	clear: both;
+	padding: 0 10px 0px 20px;
+}
+h1.logo { 
+	a { color: white; }
+	line-height: 50px;
+	margin: 0;
+	font-weight: 800;
+	font-style: italic;
+	font-size: 18px; 
+	float: left;
+}
+.main-nav {
+	float: right;
+	position: relative;
+	margin: 0;
+	>i {
+		text-align: center;
+		line-height: 50px;
+		font-size:18px;
+		height: 50px;
+		width: 50px;
+		display: block;
+		color: $white;
+		&.open { 
+			background-color: lighten($black, 5%); 
+			color: $orange;
+		}
+	}
+	.menu { 
+		display: block;
+		position: absolute;
+		right: 0px;
+		width: 250px;
+		margin-top: 7px;
+	}
+}
+
+.login-form {
+	text-align: center;
+	.social-login { margin-top: 15px; }
+	font-size: 16px;
+	.input-wrapper { 
+		width: 100%; 
+		margin-bottom: 15px; 
+	}
+	button.login { 
+		width: 100%;
+		margin-bottom: 15px; 
+	}
+}
+
+button.facebook {
+	background-color: #4d78d8;
+	border-color: darken(#4d78d8,10%);
+	i { padding-right: .5em; }
+	width: 49%;
+	margin-right: 2%;
+	display: block;
+	float: left;
+	text-align:left;
+}
+button.twitter {
+	background-color: #57cbff;
+	border-color: darken(#57cbff,10%);
+	i { padding-right: .5em; }
+	display: block;
+	width: 49%;
+	float: left;
+	text-align: left;
+}
+//signup
+
+div.input-wrapper {
+	position: relative;
+	height: 40px;
+	&:after { 
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 10px;
+		color: $purple;
+		line-height: 40px;
+		font-family: $icon;
+	}
+	&.password:after { content: "\f023"; }
+	&.user:after { content: "\f007"; }
+	input { 
+		font-family: $sans;
+		color: $default;
+		background: $white;
+		border: 1px solid #e3e3e3;
+		border-top: 2px solid #e3e3e3;
+		-webkit-border-radius: 2px;
+		-moz-border-radius: 2px;
+		border-radius: 2px;
+		height: 40px;
+		margin: 0;
+		width: 100%;
+		padding-left: 10px;
+		padding-right: 20px;
+		outline: 0;
+		&::-webkit-input-placeholder { color: $purple; }
+		&:-moz-placeholder {  color: $purple;  }
+		&::-moz-placeholder { color: $purple; }
+		&:-ms-input-placeholder {  color: $purple; }
+		&:focus { 
+			&::-webkit-input-placeholder { color: #ccc; }
+			&:-moz-placeholder {  color: #ccc;  }
+			&::-moz-placeholder { color: #ccc; }
+			&:-ms-input-placeholder {  color: #ccc; }
+		}
+	}
+}
+
+button { 
+	background-color: $orange;
+	border: 0;
+	cursor: pointer;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	border-bottom: 3px solid darken($orange,10%);
+	color: $white;
+	font-weight: 500;
+	padding: .5em 1em;
+	&.big { font-size: 16px; }
+	&.small { font-size: 12px; }
+	font-size: 14px;
+}
+
