@@ -42,7 +42,7 @@ export default Ember.Component.extend({
         },
         paypal: function(amount) {
             this.set('hasSponsored', true);
-            alert('TODO: Redirect to PayPal to donate $' + amount);
+            window.alert('TODO: Redirect to PayPal to donate $' + amount);
         },
         buy: function() {
             this.set('isBuying', true);
