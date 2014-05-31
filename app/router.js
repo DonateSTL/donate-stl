@@ -18,7 +18,7 @@ Router.map(function() {
             this.route('edit');
         });
     });
-    this.route('search', { path: '/search/:query' });
+    this.route('search', { path: '/search/:search_query' });
 });
 
 export default Router;

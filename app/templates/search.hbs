@@ -1,4 +1,6 @@
-{{#each solicitation in filterContent}}
+{{#each solicitation in filteredContent}}
     {{solicitation-summary solicitation=solicitation}}
+{{else}}
+    None match.
 {{/each}}
 
