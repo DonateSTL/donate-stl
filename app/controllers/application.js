@@ -12,13 +12,13 @@ export default Ember.Controller.extend({
     isMenuOpen: false,
     actions: {
     	toggleMenu: function() {
-    		this.toggleProperty("isMenuOpen");
+            this.toggleProperty("isMenuOpen");
     	},
         query: function() {
             var query = this.get('search');
             this.transitionToRoute('search', query);
         }
-    })
+    }
 });
 
 
