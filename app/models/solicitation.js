@@ -18,7 +18,7 @@ Solicitation.reopenClass({
             id: 10,
             title: 'Cat Litter',
             description: 'Our rescued cats need litter to go to the bathroom with.',
-            imageUrl: 'http://ecx.images-amazon.com/images/I/61mr6MbphlL.jpg',
+            imageUrl: 'http://ecx.images-amazon.com/images/I/61mr6MbphlL._SL500_SS75_.jpg',
             value: '18',
             amazonUrl: 'http://www.amazon.com/dp/B004U8Z7DI',
             isOpen: true,

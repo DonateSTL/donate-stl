@@ -7,5 +7,7 @@
     {{#link-to 'solicitations' charity}}
         More Items from {{charity.title}}
     {{/link-to}}
-    {{solicitation-summary solicitation=charity.featuredSolicitation}}
+    {{#if charity.featuredSolicitation}}
+        {{solicitation-summary solicitation=charity.featuredSolicitation}}
+    {{/if}}
 {{/each}}

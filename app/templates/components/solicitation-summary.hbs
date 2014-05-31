@@ -1,2 +1,44 @@
-SOLICITATION SUMMARY TODO
+<h4>{{solicitation.title}}</h4>
+<img {{bind-attr src=solicitation.imageUrl}}>
+{{#if isDonating}}
+    <p>{{solicitation.description}}</p>
+    {{#unless isGiving}}{{#unless isSponsoring}}{{#unless isBuying}}
+        <button {{action 'give'}}>Give In Person</button>
+        <button {{action 'sponsor'}}>Sponsor</button>
+        <button {{action 'buy'}}>Buy on Amazon</button>
+    {{/unless}}{{/unless}}{{/unless}}
+    {{#if isGiving}}
+        {{#unless hasGiven}}{{#unless hasRequestedContact}}
+            <p>Commit to an in-person delivery?</p>
+            <h5>{{solicitation.charity.title}}</h5>
+            <p>{{solicitation.charity.address}}</p>
+            <h6>Hours</h6>
+            <p>{{solicitation.charity.hours}}</p>
+            <button {{action 'commit'}}>Okay, I&rsquo;ll deliver it</button>
+            <button {{action 'contact'}}>I&rsquo;d like to be contacted to work out the details</button>
+        {{/unless}}{{/unless}}
+        {{#if hasGiven}}
+            TODO YOU ARE AWESOME
+        {{/if}}
+        {{#if hasRequestedContact}}
+            TODO REQUESTED CONTACT
+        {{/if}}
+    {{/if}}
+    {{#if isSponsoring}}
+        {{#if hasSponsored}}
+            TODO THANKS FOR SPONSORING
+        {{else}}
+            {{input type="number" value=solicitation.value}}
+            <button {{action 'paypal' solicitation.value}}>Donate on PayPal</button>
+        {{/if}}
+    {{/if}}
+    {{#if isBuying}}
+        {{#if hasBought}}
+            TODO THANKS FOR BUYING
+        {{/if}}
+    {{/if}}
+    <button {{action 'cancel'}}>{{cancelText}}</button>
+{{else}}
+    <button {{action 'donate'}}>Donate</button>
+{{/if}}
 
