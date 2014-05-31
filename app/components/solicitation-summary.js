@@ -1,3 +1,5 @@
+import Router from 'donate-stl/router';
+
 export default Ember.Component.extend({
     // TODO: Use Ember StateManager https://github.com/emberjs/ember-states
     isDonating: false,
@@ -11,6 +13,9 @@ export default Ember.Component.extend({
     cancelText: Ember.computed('hasGiven', 'hasSponsored', 'hasBought', function() {
         var hasFinished = this.get('hasGiven') || this.get('hasSponsored') || this.get('hasBought');
         return hasFinished ? 'Done' : 'Cancel';
+    }),
+    twitterLink: Ember.computed('solicitation', 'solicitation.charity', function() {
+        return Router.router.generate(['solicitation'], this.get('solicitation.charity'), this.get('solicitation'));
     }),
     actions: {
         cancel: function() {
