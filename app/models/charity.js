@@ -7,6 +7,7 @@ var Charity = DS.Model.extend({
     phoneNumber: DS.attr('string'),
     address: DS.attr('string'),
     websiteUrl: DS.attr('string'),
+    paypalEmail: DS.attr('string'),
     // Relationships
     administrator: DS.belongsTo('user', { async: true }),
     solicitations: DS.hasMany('solicitation', { async: true }),
@@ -27,6 +28,7 @@ Charity.reopenClass({
             phoneNumber: '314-771-6121',
             address: '2320 Pine St\nSt. Louis, MO 63103-2219',
             websiteUrl: 'http://strayrescue.org/',
+            paypalEmail: 'strayrescue@example.com',
             administrator: null,
             solicitations: [10]
         },
@@ -39,6 +41,7 @@ Charity.reopenClass({
             phoneNumber: '1-888-370-8885',
             address: 'P.O. Box 187 Collinsville\nIL 62234',
             websiteUrl: 'http://3littlebirds4life.org/',
+            paypalEmail: '3littlebirds4life@example.com',
             administrator: null,
             solicitations: []
         },

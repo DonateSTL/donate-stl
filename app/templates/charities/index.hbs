@@ -1,7 +1,7 @@
 <section class="hero">
     <p>Hero copy goes here.</p>
 </section>
-{{input class="primary-search" type="search" value=search placeholder="Search all solicitations"}}
+{{input class="primary-search" type="search" value=search placeholder="Search all solicitations" action="query"}}
 {{#each charity in model}}
     {{charity.title}}
     {{#link-to 'solicitations' charity}}
