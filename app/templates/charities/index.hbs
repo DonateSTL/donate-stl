@@ -1,0 +1,11 @@
+<section class="hero">
+    <p>Hero copy goes here.</p>
+</section>
+{{input class="primary-search" type="search" value=search placeholder="Search all solicitations"}}
+{{#each charity in model}}
+    {{charity.title}}
+    {{#link-to 'solicitations' charity}}
+        More Items from {{charity.title}}
+    {{/link-to}}
+    {{solicitation-summary solicitation=charity.featuredSolicitation}}
+{{/each}}

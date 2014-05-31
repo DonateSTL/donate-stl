@@ -1,3 +1,26 @@
-<h2 id='title'>Welcome to Ember.js</h2>
+<header>
+    <h1>
+        {{#link-to 'index'}}Donate STL{{/link-to}}
+    </h1>
+    <nav>
+        <ul>
+            {{#if user.isLoggedIn}}
+                <li>
+                    <button {{action 'logout'}}>Log Out</button>
+                </li>
+                <li>
+                    {{#link-to 'user.edit' user}}Account{{/link-to}}
+                </li>
+            {{else}}
+                <li>
+                    <button {{action 'login'}}>Log In</button>
+                </li>
+                <li>
+                    {{#link-to 'users.new'}}Sign Up{{/link-to}}
+                </li>
+            {{/if}}
+        </ul>
+    </nav>
+</header>
 
 {{outlet}}

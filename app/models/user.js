@@ -4,8 +4,8 @@ export default DS.Model.extend({
     phoneNumber: DS.attr('string'),
 
     // Relationships
-    charities: DS.hasMany('charity'),
-    sentMessages: DS.hasMany('message', { inverse: 'sender' }),
-    receivedMessages: DS.hasMany('message', { inverse: 'recipient' })
+    charities: DS.hasMany('charity', { async: true }),
+    sentMessages: DS.hasMany('message', { inverse: 'sender', async: true }),
+    receivedMessages: DS.hasMany('message', { inverse: 'recipient', async: true })
 });
 

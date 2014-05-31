@@ -3,10 +3,10 @@ export default DS.Model.extend({
     body: DS.attr('string'),
 
     // Relationships
-    sender: DS.belongsTo('user'),
-    recipient: DS.belongsTo('user'),
-    solicitation: DS.belongsTo('solicitation'),
-    parentMessage: DS.belongsTo('message', { inverse: 'reply' }),
-    reply: DS.belongsTo('message', { inverse: 'parentMessage' })
+    sender: DS.belongsTo('user', { async: true }),
+    recipient: DS.belongsTo('user', { async: true }),
+    solicitation: DS.belongsTo('solicitation', { async: true }),
+    parentMessage: DS.belongsTo('message', { inverse: 'reply', async: true }),
+    reply: DS.belongsTo('message', { inverse: 'parentMessage', async: true })
 });
 
