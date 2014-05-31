@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>DonateStl</title>
+    <title>DonateSTL</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
     {{BASE_TAG}}
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,800italic,600,300,400' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,800italic,600,300,400' rel='stylesheet' type='text/css'>
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/donate-stl.css">
   </head>
@@ -17,6 +17,7 @@
     <script>
       window.ENV = {{ENV}};
     </script>
+    <script src="https://cdn.firebase.com/js/client/1.0.6/firebase.js"></script>
     <script src="assets/donate-stl.js"></script>
     <script>
       window.DonateStl = require('donate-stl/app')['default'].create(ENV.APP);
