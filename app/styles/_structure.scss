@@ -1,0 +1,23 @@
+body,html { margin: 0 auto; }
+*,*:after,*:before { box-sizing: border-box; }
+
+.card {
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	border: 1px solid #d4d4d4;
+	background: $white;
+	padding: 15px;
+	header.card-header { 
+		margin: -15px -15px 0 -15px; 
+		border-bottom: 1px solid #d4d4d4;
+	}
+	-webkit-box-shadow: 0 0 4px rgba(black,.15);
+	-moz-box-shadow: 0 0 4px rgba(black,.15);
+	box-shadow: 0 0 4px rgba(black,.15);
+}
+
+.clear {
+	&:after { content: ""; display: block; height: 0; width: 0; clear: both; }
+	&:before { content: ""; display: block; height: 0; width: 0; clear: both; }
+}
