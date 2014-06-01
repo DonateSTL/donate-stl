@@ -1,5 +1,5 @@
-/*global Firebase*/
+import firebase from 'donate-stl/utils/firebase';
 export default DS.FirebaseAdapter.extend({
-      firebase: new Firebase('https://donate-stl.firebaseio.com')
+      firebase: firebase
 });
 

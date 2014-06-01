@@ -1,7 +1,7 @@
 export default Ember.Route.extend({
     beforeModel: function() {
-        var user = this.controllerFor('application').get('user');
-        if (user.get('isLoggedIn') && user.get('hasCharity')) {
+        var auth = this.get('auth');
+        if (auth && auth.get('currentUser.hasCharity')) {
             return this.transitionTo('dashboard');
         }
         else {

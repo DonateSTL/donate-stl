@@ -6,7 +6,7 @@
         <i class="fa fa-bars" {{action 'toggleMenu'}} {{bind-attr class="isMenuOpen:open"}}></i>
         {{#if isMenuOpen}}
             <div class="menu card">
-                {{#if user.isLoggedIn}}
+                {{#if auth.currentUser}}
                     <ul>
                         <li>
                             <button {{action 'logout'}}>Log Out</button>
@@ -16,12 +16,12 @@
                         </li>
                     </ul>
                 {{else}}
-                    <div class="login-form">
+                    <form class="login-form" {{action 'login' on='submit'}}>
                         <div class="input-wrapper user">
-                            <input type="text" placeholder="Email Address">
+                            {{input type="text" placeholder="Email Address" value=email}}
                         </div>
                         <div class="input-wrapper password">
-                            <input type="password" placeholder="Password">
+                            {{input type="password" placeholder="Password" value=password}}
                         </div>
                         <button class="login" {{action 'login'}}>Log In / Sign Up</button>
                         or log in with
@@ -29,7 +29,7 @@
                             <button class="facebook"><i class="fa fa-facebook"></i>Facebook</button>
                             <button class="twitter"><i class="fa fa-twitter"></i>Twitter</button>
                         </div>
-                    </div>
+                    </form>
                 {{/if}}
             </div>
         {{/if}}

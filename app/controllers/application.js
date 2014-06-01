@@ -1,5 +1,4 @@
 export default Ember.Controller.extend({
-    user: Ember.Object.create(),
     searchQuery: '',
     searchQueryChanged: Ember.observer('searchQuery', function() {
         if (this.get('searchQuery') === '') { 
@@ -20,6 +19,16 @@ export default Ember.Controller.extend({
         query: function() {
             var query = this.get('search');
             this.transitionToRoute('search', query);
+        },
+        login: function(email, password) {
+            var auth = this.get('auth');
+            email = email || this.get('email');
+            password = password || this.get('password');
+
+            return auth.login(email, password);
+        },
+        logout: function() {
+            this.get('auth').logout();
         }
     }
 });
