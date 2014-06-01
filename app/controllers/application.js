@@ -14,6 +14,9 @@ export default Ember.Controller.extend({
     	toggleMenu: function() {
             this.toggleProperty("isMenuOpen");
     	},
+        toggleSearch: function() {
+            this.toggleProperty("isSearchOpen");
+        },
         query: function() {
             var query = this.get('search');
             this.transitionToRoute('search', query);

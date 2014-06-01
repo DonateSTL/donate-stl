@@ -3,24 +3,30 @@
 give away your ununsed items
 to St. Louis charities.</p>
 
-	{{input class="primary-search" type="search" value=search placeholder="Search all solicitations" action="query"}}
+	<h4>Something Specific In mind?</h4>
+	<div class="input-wrapper search left">
+		{{input class="primary-search" type="search" value=search placeholder="Search all solicitations" action="query"}}
+	</div>
+	<h4>
+		<br>or<br><br>
+		browse below to see what people need
+	</h4>
+	<i class="fa fa-arrow-circle-down big-arrow"></i>
 
 </section>
 <section class="solicitations wrapper clear">
 	{{#each charity in model}}
-	    <section class="solicitation card">
-	    	<header class="card-header clear">
+	    	<div class="card-header clear">
 	    		<h3 class="card-header-title">{{charity.title}}</h3>
 	    		<div class="more">
 				    {{#link-to 'solicitations' charity}}
 				        more<i class="fa fa-arrow-circle-right"></i>
 				    {{/link-to}}
 	    		</div>
-	    	</header>
+	    	</div>
 		    {{#if charity.featuredSolicitation}}
 		        {{solicitation-summary solicitation=charity.featuredSolicitation}}
 		    {{/if}}
-	    </section>
 	{{/each}}
 </section>
 

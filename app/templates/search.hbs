@@ -1,6 +1,8 @@
-{{#each solicitation in filteredContent}}
+<section class="solicitations wrapper clear">
+	{{#each solicitation in filteredContent}}
     {{solicitation-summary solicitation=solicitation}}
 {{else}}
     None match.
 {{/each}}
+</section>
 

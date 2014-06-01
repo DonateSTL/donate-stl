@@ -91,6 +91,7 @@ div.input-wrapper {
 	height: 40px;
 	&:after { 
 		display: block;
+		width: 0px;
 		position: absolute;
 		top: 0;
 		right: 10px;
@@ -109,6 +110,8 @@ div.input-wrapper {
 	&.password:after { content: "\f023"; }
 	&.user:after { content: "\f007"; }
 	&.dollar:after { content: "\f155"; }
+	&.search:after { content: "\f002"; }
+
 	input { 
 		font-size: 14px;
 		font-family: $sans;
@@ -140,6 +143,38 @@ div.input-wrapper {
 	&.left input { padding-left: 30px; padding-right: 10px; }
 }
 
+.header-search {
+	float: right;
+	margin: 0;
+	>i {
+		text-align: center;
+		line-height: 50px;
+		font-size:18px;
+		height: 50px;
+		width: 50px;
+		display: block;
+		color: $white;
+		&.open { 
+			background-color: lighten($black, 5%); 
+			color: $orange;
+		}
+	}
+	.input-wrapper.search { 
+		position: absolute; 
+		left: 0;
+		width: 100%;
+		input {
+			-webkit-border-radius: 0;
+			-moz-border-radius: 0;
+			border-radius: 0;
+			border: 0;
+			-webkit-box-shadow: 0 0 4px rgba(black,.15);
+			-moz-box-shadow: 0 0 4px rgba(black,.15);
+			box-shadow: 0 0 4px rgba(black,.15);
+		}
+	}
+}
+
 button { 
 	background-color: $orange;
 	border: 0;
@@ -153,6 +188,10 @@ button {
 	padding: .5em 1em;
 	&.big { font-size: 16px; }
 	&.small { font-size: 12px; }
+	&.purple {
+		background-color: $purple;
+		border-color: darken($purple,10%)
+	}
 	font-size: 14px;
 }
 
@@ -160,25 +199,38 @@ button { width: 100%; a { color: $white; } }
 
 // Hero
 section.hero {
-	background: url(img/heroBG.jpg) center;
+	background: url(img/heroBG.jpg) center top;
 	background-size: cover;
 	position: relative;
-	margin-top: 50px;
-	height: 430px;
-	padding-top: 50px;
-	padding: 15px;
+	height: 480px;
+	padding: 50px 15px;
 	text-align:center;
 	color: $white;
-	p.welcome { margin: 0 50px;}
+	p.welcome { margin: 0px 20px 20px;}
+	h4 { padding: 10px 0; line-height: 1.3em; font-weight: 600; font-size: 18px; text-transform: uppercase; letter-spacing: 1px; }
+	.big-arrow { font-size: 65px; margin-top: 10px;}
+	a { color: $white; }
+	a.website-link {
+		display: inline-block;
+		margin-top: 20px;
+		font-size: 14px;
+		i { margin-left: .5em; }
+	}
+	&.charity {
+		background: url(img/smallHeroBG.jpg) bottom center $lightPurple no-repeat;
+		height: auto;
+		text-align: left;
+		p { text-align: left; }
+	}
 }
 
 section.solicitations {
 	background-color: $offWhite;
-	section.solicitation {
-		margin-bottom: 15px;
-		&:first-of-type { margin-top: 15px; }
+	padding-top: 15px;
+}
 
-	}
+article.solicitation {
+	margin-bottom: 15px;
 }
 
 .solicitation-options {
@@ -199,14 +251,19 @@ section.solicitations {
 .solicitation-title {
 	text-align: left;
 	margin-left: 50px;
-	margin-right: 90px;
-	line-height: 40px;
+	margin-right: 65px;
+	line-height: 1.46em;
+	vertical-align: middle;
+	padding-top: 10px;
+	font-size: 14px;
+	
 }
 .donate-init {
 	position: absolute;
 	right: 0;
 	top: 0;
 	line-height: 35px;
+	button { font-size: 12px; }
 }
 .description-text {
 	text-align:center;

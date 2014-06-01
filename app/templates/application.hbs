@@ -2,7 +2,6 @@
     <h1 class="logo">
         {{#link-to 'index'}}Donate STL{{/link-to}}
     </h1>
-    {{input class="primary-search" type="search" value=searchQuery placeholder="Search all solicitations"}}
     <nav class="main-nav" >
         <i class="fa fa-bars" {{action 'toggleMenu'}} {{bind-attr class="isMenuOpen:open"}}></i>
         {{#if isMenuOpen}}
@@ -35,6 +34,15 @@
             </div>
         {{/if}}
     </nav>
+    <div class="header-search">
+        <i class="fa fa-search" {{action 'toggleSearch'}} {{bind-attr class="isSearchOpen:open"}}></i>
+        {{#if isSearchOpen}}
+            <div class="input-wrapper search left">
+                {{input class="primary-search" type="search" value=searchQuery placeholder="Search all solicitations"}}
+            </div>
+         {{/if}}
+    </div>
 </header>
-
+<div class="page-body">
 {{outlet}}
+</div>

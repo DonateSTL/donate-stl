@@ -1,7 +1,10 @@
-<section class="hero">
+<section class="hero charity">
 <h2>{{title}}</h2>
-<p>{{description}}</p>
-<img {{bind-attr src=imageUrl}}>
+<p class="description-text">{{description}}</p>
+<!--<img class="logo" {{bind-attr src=imageUrl}}>-->
+<a href="/" class="website-link">{{title}} Website <i class="fa fa-arrow-circle-right"></i></a>
 </section>
-{{outlet}}
+<section class="solicitations wrapper clear">
+	{{outlet}}
+</section
 
