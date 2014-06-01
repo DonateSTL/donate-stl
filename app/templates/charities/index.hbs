@@ -1,13 +1,26 @@
 <section class="hero">
-    <p>Hero copy goes here.</p>
+    <p class="welcome">Hello, we are here to help you
+give away your ununsed items
+to St. Louis charities.</p>
+
+	{{input class="primary-search" type="search" value=search placeholder="Search all solicitations" action="query"}}
+
 </section>
-{{input class="primary-search" type="search" value=search placeholder="Search all solicitations" action="query"}}
-{{#each charity in model}}
-    {{charity.title}}
-    {{#link-to 'solicitations' charity}}
-        More Items from {{charity.title}}
-    {{/link-to}}
-    {{#if charity.featuredSolicitation}}
-        {{solicitation-summary solicitation=charity.featuredSolicitation}}
-    {{/if}}
-{{/each}}
+<section class="solicitations wrapper clear">
+	{{#each charity in model}}
+	    <section class="solicitation card">
+	    	<header class="card-header clear">
+	    		<h3 class="card-header-title">{{charity.title}}</h3>
+	    		<div class="more">
+				    {{#link-to 'solicitations' charity}}
+				        more<i class="fa fa-arrow-circle-right"></i>
+				    {{/link-to}}
+	    		</div>
+	    	</header>
+		    {{#if charity.featuredSolicitation}}
+		        {{solicitation-summary solicitation=charity.featuredSolicitation}}
+		    {{/if}}
+	    </section>
+	{{/each}}
+</section>
+

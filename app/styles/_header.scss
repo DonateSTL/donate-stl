@@ -2,7 +2,11 @@
 	background: $black;
 	height: 50px;
 	clear: both;
-	padding: 0 10px 0px 20px;
+	padding: 0 10px 0px 15px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1000;
 }
 h1.logo { 
 	a { color: white; }
@@ -62,19 +66,27 @@ button.facebook {
 	display: block;
 	float: left;
 	text-align:left;
+	&.big { i { padding-right: .75em; }}
 }
 button.twitter {
 	background-color: #57cbff;
 	border-color: darken(#57cbff,10%);
 	i { padding-right: .5em; }
+	&.big { i { padding-right: .75em; }}
 	display: block;
 	width: 49%;
 	float: left;
 	text-align: left;
 }
+button.cancel {
+	background-color: #d2d2d2;
+	color: $default;
+	border-color: darken(#d2d2d2,15%);
+}
 //signup
 
 div.input-wrapper {
+	text-align: left;
 	position: relative;
 	height: 40px;
 	&:after { 
@@ -86,9 +98,19 @@ div.input-wrapper {
 		line-height: 40px;
 		font-family: $icon;
 	}
+	&.right:after {
+		right: 10px;
+		left: 0;
+	}
+	&.left:after {
+		left: 10px;
+		right: 0;
+	}
 	&.password:after { content: "\f023"; }
 	&.user:after { content: "\f007"; }
+	&.dollar:after { content: "\f155"; }
 	input { 
+		font-size: 14px;
 		font-family: $sans;
 		color: $default;
 		background: $white;
@@ -114,6 +136,8 @@ div.input-wrapper {
 			&:-ms-input-placeholder {  color: #ccc; }
 		}
 	}
+	&.right input { padding-right: 30px; padding-left: 10px; }
+	&.left input { padding-left: 30px; padding-right: 10px; }
 }
 
 button { 
@@ -132,3 +156,63 @@ button {
 	font-size: 14px;
 }
 
+button { width: 100%; a { color: $white; } }
+
+// Hero
+section.hero {
+	background: url(img/heroBG.jpg) center;
+	background-size: cover;
+	position: relative;
+	margin-top: 50px;
+	height: 430px;
+	padding-top: 50px;
+	padding: 15px;
+	text-align:center;
+	color: $white;
+	p.welcome { margin: 0 50px;}
+}
+
+section.solicitations {
+	background-color: $offWhite;
+	section.solicitation {
+		margin-bottom: 15px;
+		&:first-of-type { margin-top: 15px; }
+
+	}
+}
+
+.solicitation-options {
+	position: relative;
+	text-align: center;
+	button { margin-bottom: 10px;}
+	p {
+		white-space: pre-line;
+		margin-bottom: 15px;
+		font-size: 14px;
+	}
+}
+.solicitation-img {
+	height: 40px;
+	width: 40px;
+	float: left;
+}
+.solicitation-title {
+	text-align: left;
+	margin-left: 50px;
+	margin-right: 90px;
+	line-height: 40px;
+}
+.donate-init {
+	position: absolute;
+	right: 0;
+	top: 0;
+	line-height: 35px;
+}
+.description-text {
+	text-align:center;
+	font-size: 14px;
+	margin: 15px 0;
+}
+.congrats { margin: 30px 0;}
+.solicit-amount-wrapper { width: 235px; margin: 30px auto; label { text-align: right; width: 120px; margin-right: 15px; float: left; } }
+.solicit-amount { width: 100px; input { color: $purple; }  float: left;}

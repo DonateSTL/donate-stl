@@ -7,17 +7,29 @@ body,html { margin: 0 auto; }
 	border-radius: 2px;
 	border: 1px solid #d4d4d4;
 	background: $white;
-	padding: 15px;
+	padding: 10px;
+	margin-bottom: 15px;
 	header.card-header { 
-		margin: -15px -15px 0 -15px; 
+		margin: -10px -10px 10px -10px; 
+		padding: 10px 10px;
 		border-bottom: 1px solid #d4d4d4;
+		.card-header-title { margin-right: 70px;}
+		position: relative;
+		.more { 
+			position: absolute;
+			right: 15px;
+			top: 10px;
+			font-size: 14px;
+			i { margin-left: .5em; }
+		}
 	}
-	-webkit-box-shadow: 0 0 4px rgba(black,.15);
-	-moz-box-shadow: 0 0 4px rgba(black,.15);
-	box-shadow: 0 0 4px rgba(black,.15);
+	-webkit-box-shadow: 0 0 4px rgba(black,.10);
+	-moz-box-shadow: 0 0 4px rgba(black,.10);
+	box-shadow: 0 0 4px rgba(black,.10);
 }
 
 .clear {
 	&:after { content: ""; display: block; height: 0; width: 0; clear: both; }
 	&:before { content: ""; display: block; height: 0; width: 0; clear: both; }
 }
+.wrapper { padding: 0 15px; }
