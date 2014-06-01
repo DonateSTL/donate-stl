@@ -1,0 +1,29 @@
+<section class="hero">
+    <p class="welcome">St. Louis charities need donations, and you have resources. Find out which items are in need <em>right now</em> so you can help them make a real difference.</p>
+
+	<div class="input-wrapper search left">
+		{{input class="primary-search" type="search" value=search placeholder="Search to donate a specific item" action="query"}}
+	</div>
+	<h4>
+		<span class="or-flourish">or</span>
+		browse below to see what charities need <em>now</em>
+	</h4>
+	<i class="fa fa-arrow-circle-down big-arrow"></i>
+
+</section>
+<section class="solicitations wrapper clear">
+	{{#each charity in approvedCharities}}
+            {{#link-to 'solicitations' charity tagName="div" class="card-header clear"}}
+                <h3 class="card-header-title">{{charity.title}}</h3>
+                <div class="more">
+                    {{#link-to 'solicitations' charity}}
+                        more<i class="fa fa-arrow-circle-right"></i>
+                    {{/link-to}}
+                </div>
+            {{/link-to}}
+		    {{#if charity.featuredSolicitation}}
+		        {{solicitation-summary solicitation=charity.featuredSolicitation}}
+		    {{/if}}
+	{{/each}}
+</section>
+

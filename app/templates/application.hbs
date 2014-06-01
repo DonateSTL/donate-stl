@@ -1,0 +1,68 @@
+<header class="site-header">
+    <h1 class="logo">
+        {{#link-to 'index'}}Donate STL{{/link-to}}
+    </h1>
+    <nav class="main-nav" >
+        <i class="fa fa-bars" {{action 'toggleMenu'}} {{bind-attr class="isMenuOpen:open"}}></i>
+        {{#if isMenuOpen}}
+            <div class="menu card">
+                {{#if auth.currentUser}}
+                    <ul>
+                        <li>
+                            <button {{action 'logout'}}>
+                                Log Out
+                                <small>({{auth.currentUser.email}})</small>
+                            </button>
+                        </li>
+                        <li>
+                            {{#link-to 'user.edit' auth.currentUser}}
+                                Account
+                                <small>({{auth.currentUser.email}})</small>
+                            {{/link-to}}
+                        </li>
+                        {{#each charity in auth.currentUser.charities}}
+                            <li>
+                                {{#link-to 'charitiy.dashboard' charity}}
+                                    Manage {{charity.title}}
+                                {{/link-to}}
+                            </li>
+                        {{/each}}
+                        <li>
+                            {{#link-to 'charities.new'}}
+                                Apply as a Charity
+                            {{/link-to}}
+                        </li>
+                    </ul>
+                {{else}}
+                    <form class="login-form" {{action 'login' on='submit'}}>
+                        <div class="input-wrapper user">
+                            {{input type="text" placeholder="Email Address" value=email}}
+                        </div>
+                        <div class="input-wrapper password">
+                            {{input type="password" placeholder="Password" value=password}}
+                        </div>
+                        <button class="login" {{action 'login'}}>Log In / Sign Up</button>
+                        {{!--
+                        or log in with
+                        <div class="clear social-login"> 
+                            <button class="facebook"><i class="fa fa-facebook"></i>Facebook</button>
+                            <button class="twitter"><i class="fa fa-twitter"></i>Twitter</button>
+                        </div>
+                        --}}
+                    </form>
+                {{/if}}
+            </div>
+        {{/if}}
+    </nav>
+    <div class="header-search">
+        <i class="fa fa-search" {{action 'toggleSearch'}} {{bind-attr class="isSearchOpen:open"}}></i>
+        {{#if isSearchOpen}}
+            <div class="input-wrapper search left">
+                {{input class="primary-search" type="search" value=searchQuery placeholder="Search for requested items"}}
+            </div>
+         {{/if}}
+    </div>
+</header>
+<div class="page-body">
+{{outlet}}
+</div>

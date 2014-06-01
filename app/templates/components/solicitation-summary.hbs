@@ -1,0 +1,77 @@
+
+     <article class="solicitation card" {{action 'donate'}}>
+        
+        <div class="solicitation-options clear">
+            <img class="solicitation-img" {{bind-attr src=solicitation.imageUrl}}>
+            <h4 class="solicitation-title">
+                {{solicitation.title}}
+            </h4>
+
+
+            {{#if isDonating}}    
+                
+                    
+                    {{#unless isGiving}}{{#unless isSponsoring}}{{#unless isBuying}}
+                        <p class="description-text">{{solicitation.description}}</p>
+                        <button class="big"{{action 'give'}}>Give In Person</button>
+                        <button class="big"{{action 'sponsor'}}>Sponsor</button>
+                        <button class="big"{{action 'buy'}}>Buy on Amazon</button>
+                    {{/unless}}{{/unless}}{{/unless}}
+                    {{#if isGiving}}
+                        {{#unless hasGiven}}{{#unless hasRequestedContact}}
+                            <p class="description-text">Commit to an in-person delivery?</p>
+                            <h5>{{solicitation.charity.title}}</h5>
+                            <p>{{solicitation.charity.address}}</p>
+                            <h5>Hours</h5> 
+                            <p>{{solicitation.charity.hours}}</p>
+                            <button class="big"{{action 'commit'}}>Okay, I&rsquo;ll deliver it</button>
+                            <button class="big"{{action 'contact'}}>I&rsquo;d like to be contacted to work out the details</button>
+                        {{/unless}}{{/unless}}
+                        {{#if hasGiven}}
+                            <br>
+                            <h2 class="congrats">You&rsquo;re Awesome!</h2>
+                            <p>We&rsquo;ve sent you a confirmation email with directions to {{solicitation.charity.title}}.</p>
+                            <button class="big facebook"><i class="fa fa-facebook"></i><a href="http://TODO.example.com/">Share</a></button>
+                            <button class="big twitter"><i class="fa fa-twitter"></i><a href="http://TODO.example.com/">Tweet</a></button>
+                            
+                        {{/if}}
+                        {{#if hasRequestedContact}}
+                            <h5>{{solicitation.charity.title}} will be in touch!</h5>
+                        {{/if}}
+                    {{/if}}
+                    {{#if isSponsoring}}
+                        {{#if hasSponsored}}
+                            <h2 class="congrats">You&rsquo;re Awesome!</h2>
+                            <button class="big facebook"><i class="fa fa-facebook"></i><a href="http://TODO.example.com/">Share</a></button>
+                            <button class="big twitter"><i class="fa fa-twitter"></i><a href="http://TODO.example.com/">Tweet</a></button>
+                        {{else}}
+                            <div class="solicit-amount-wrapper clear">
+                                <label>
+                                    Recommended amount
+                                </label>
+                                <div class="input-wrapper dollar left solicit-amount">
+                                    {{input type="number" value=solicitation.value}}
+                                </div>
+                            </div>
+
+                            <button class="big" {{action 'paypal' solicitation.value}}>Donate on PayPal</button>
+                        {{/if}}
+                    {{/if}}
+                    {{#if isBuying}}
+                        {{#if hasBought}}
+                            <h2 class="congrats">You&rsquo;re Awesome!</h2>
+                            <button class="big facebook"><i class="fa fa-facebook"></i><a href="http://TODO.example.com/">Share</a></button>
+                            <button class="big twitter"><i class="fa fa-twitter"></i><a href="http://TODO.example.com/">Tweet</a></button>
+                        {{/if}}
+                    {{/if}}
+                    <button class="big cancel"{{action 'cancel' bubbles=false}}>{{cancelText}}</button>
+
+        {{else}}
+            <div class="donate-init">
+                <button {{action 'donate'}}>Donate</button>
+            </div>
+        {{/if}}
+    </div>
+
+</article>
+

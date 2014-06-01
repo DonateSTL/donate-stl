@@ -1,0 +1,276 @@
+.site-header {
+	background: $black;
+	height: 50px;
+	clear: both;
+	padding: 0 10px 0px 15px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1000;
+}
+h1.logo { 
+	a { color: white; }
+	line-height: 50px;
+	margin: 0;
+	font-weight: 800;
+	font-style: italic;
+	font-size: 18px; 
+	float: left;
+}
+.main-nav {
+	float: right;
+	position: relative;
+	margin: 0;
+	>i {
+		text-align: center;
+		line-height: 50px;
+		font-size:18px;
+		height: 50px;
+		width: 50px;
+		display: block;
+		color: $white;
+		&.open { 
+			background-color: lighten($black, 5%); 
+			color: $orange;
+		}
+	}
+	.menu { 
+		display: block;
+		position: absolute;
+		right: 0px;
+		width: 250px;
+		margin-top: 7px;
+	}
+}
+
+.login-form {
+	text-align: center;
+	.social-login { margin-top: 15px; }
+	font-size: 16px;
+	.input-wrapper { 
+		width: 100%; 
+		margin-bottom: 15px; 
+	}
+	button.login { 
+		width: 100%;
+		margin-bottom: 15px; 
+	}
+}
+
+button.facebook {
+	background-color: #4d78d8;
+	border-color: darken(#4d78d8,10%);
+	i { padding-right: .5em; }
+	width: 49%;
+	margin-right: 2%;
+	display: block;
+	float: left;
+	text-align:left;
+	&.big { i { padding-right: .75em; }}
+}
+button.twitter {
+	background-color: #57cbff;
+	border-color: darken(#57cbff,10%);
+	i { padding-right: .5em; }
+	&.big { i { padding-right: .75em; }}
+	display: block;
+	width: 49%;
+	float: left;
+	text-align: left;
+}
+button.cancel {
+	background-color: #d2d2d2;
+	color: $default;
+	border-color: darken(#d2d2d2,15%);
+}
+//signup
+
+div.input-wrapper {
+	text-align: left;
+	position: relative;
+	height: 40px;
+	&:after { 
+		display: block;
+		width: 0px;
+		position: absolute;
+		top: 0;
+		right: 10px;
+		color: $purple;
+		line-height: 40px;
+		font-family: $icon;
+	}
+	&.right:after {
+		right: 10px;
+		left: 0;
+	}
+	&.left:after {
+		left: 10px;
+		right: 0;
+	}
+	&.password:after { content: "\f023"; }
+	&.user:after { content: "\f007"; }
+	&.dollar:after { content: "\f155"; }
+	&.search:after { content: "\f002"; }
+
+	input { 
+		font-size: 14px;
+		font-family: $sans;
+		color: $default;
+		background: $white;
+		border: 1px solid #e3e3e3;
+		border-top: 2px solid #e3e3e3;
+		-webkit-border-radius: 2px;
+		-moz-border-radius: 2px;
+		border-radius: 2px;
+		height: 40px;
+		margin: 0;
+		width: 100%;
+		padding-left: 10px;
+		padding-right: 20px;
+		outline: 0;
+		&::-webkit-input-placeholder { color: $purple; }
+		&:-moz-placeholder {  color: $purple;  }
+		&::-moz-placeholder { color: $purple; }
+		&:-ms-input-placeholder {  color: $purple; }
+		&:focus { 
+			&::-webkit-input-placeholder { color: #ccc; }
+			&:-moz-placeholder {  color: #ccc;  }
+			&::-moz-placeholder { color: #ccc; }
+			&:-ms-input-placeholder {  color: #ccc; }
+		}
+	}
+	&.right input { padding-right: 30px; padding-left: 10px; }
+	&.left input { padding-left: 30px; padding-right: 10px; }
+}
+
+.header-search {
+	float: right;
+	margin: 0;
+	>i {
+		text-align: center;
+		line-height: 50px;
+		font-size:18px;
+		height: 50px;
+		width: 50px;
+		display: block;
+		color: $white;
+		&.open { 
+			background-color: lighten($black, 5%); 
+			color: $orange;
+		}
+	}
+	.input-wrapper.search { 
+		position: absolute; 
+		left: 0;
+		width: 100%;
+		input {
+			-webkit-border-radius: 0;
+			-moz-border-radius: 0;
+			border-radius: 0;
+			border: 0;
+			-webkit-box-shadow: 0 0 4px rgba(black,.15);
+			-moz-box-shadow: 0 0 4px rgba(black,.15);
+			box-shadow: 0 0 4px rgba(black,.15);
+		}
+	}
+}
+
+button { 
+	background-color: $orange;
+	border: 0;
+	cursor: pointer;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	border-bottom: 3px solid darken($orange,10%);
+	color: $white;
+	font-weight: 500;
+	padding: .5em 1em;
+	&.big { font-size: 16px; }
+	&.small { font-size: 12px; }
+	&.purple {
+		background-color: $purple;
+		border-color: darken($purple,10%)
+	}
+	font-size: 14px;
+}
+
+button { width: 100%; a { color: $white; } }
+
+// Hero
+section.hero {
+	background: url(img/heroBG.jpg) center top;
+	background-size: cover;
+	position: relative;
+	height: 420px;
+	padding: 50px 15px;
+	text-align:center;
+	color: $white;
+	p.welcome { margin: 0px 20px 20px;}
+	h4 { padding: 10px 0; line-height: 1.3em; font-weight: 600; font-size: 18px; text-transform: uppercase; letter-spacing: 1px; }
+    h4 .or-flourish { display: block; font-size: 0.8em; margin: 0.25em 0; }
+	.big-arrow { font-size: 65px; margin-top: 10px;}
+	a { color: $white; }
+	a.website-link {
+		display: inline-block;
+		margin-top: 20px;
+		font-size: 14px;
+		i { margin-left: .5em; }
+	}
+	&.charity {
+		background: url(img/smallHeroBG.jpg) bottom center $lightPurple no-repeat;
+		height: auto;
+		text-align: left;
+		p { text-align: left; }
+	}
+}
+
+section.solicitations {
+	background-color: $offWhite;
+	padding-top: 15px;
+}
+
+article.solicitation {
+	margin-bottom: 15px;
+}
+
+.solicitation-options {
+	position: relative;
+	text-align: center;
+	button { margin-bottom: 10px;}
+	p {
+		white-space: pre-line;
+		margin-bottom: 15px;
+		font-size: 14px;
+	}
+}
+.solicitation-img {
+	height: 40px;
+	width: 40px;
+	float: left;
+}
+.solicitation-title {
+	text-align: left;
+	margin-left: 50px;
+	margin-right: 65px;
+	line-height: 1.46em;
+	vertical-align: middle;
+	padding-top: 10px;
+	font-size: 14px;
+	
+}
+.donate-init {
+	position: absolute;
+	right: 0;
+	top: 0;
+	line-height: 35px;
+	button { font-size: 12px; }
+}
+.description-text {
+	text-align:center;
+	font-size: 14px;
+	margin: 15px 0;
+}
+.congrats { margin: 30px 0;}
+.solicit-amount-wrapper { width: 235px; margin: 30px auto; label { text-align: right; width: 120px; margin-right: 15px; float: left; } }
+.solicit-amount { width: 100px; input { color: $purple; }  float: left;}

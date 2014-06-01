@@ -1,0 +1,89 @@
+{ "rules": {
+    "users" : {
+      "$user" : {
+        ".read" : "$user == auth.username",
+        ".write" : "$user == auth.username"
+      }
+    },
+    "solicitations" : {
+      "$solicitation" : {
+        "image_url" : {
+          ".read" : true,
+          ".write" : "root.child('charities').child(data.parent().child('charity').val()).child('admin').val() == auth.username"
+        },
+        "description" : {
+          ".read" : true,
+          ".write" : "root.child('charities').child(data.parent().child('charity').val()).child('admin').val() == auth.username"
+        },
+        "value" : {
+          ".read" : true,
+          ".write" : "root.child('charities').child(data.parent().child('charity').val()).child('admin').val() == auth.username"
+        },
+        "title" : {
+          ".read" : true,
+          ".write" : "root.child('charities').child(data.parent().child('charity').val()).child('admin').val() == auth.username"
+        },
+        "is_open" : {
+          ".read" : true,
+          ".write" : "root.child('charities').child(data.parent().child('charity').val()).child('admin').val() == auth.username"
+        },
+        "charity" : {
+          ".read" : true,
+          ".write" : "root.child('charities').child(data.val()).child('admin').val() == auth.username"
+        },
+        "amazon_url" : {
+          ".read" : true,
+          ".write" : "root.child('charities').child(data.parent().child('charity').val()).child('admin').val() == auth.username"
+        },
+        "update_date" : {
+          ".read" : "auth.username == 'console'",
+          ".write" : "auth.username == 'console'"
+        },
+        "create_date" : {
+          ".read" : "auth.username == 'console'",
+          ".write" : "auth.username == 'console'"
+        }
+      }
+    },
+    "charities" : {
+      "$charity": {
+        "phone_num" : {
+          ".read" : true,
+          ".write" : "data.parent().child('admin').val() == auth.username"
+        },
+        "website_url" : {
+          ".read" : true,
+          ".write" : "data.parent().child('admin').val() == auth.username"
+        },
+        "image_url" :{
+          ".read" : true,
+          ".write" : "data.parent().child('admin').val() == auth.username"
+        },
+        "address" : {
+          ".read" : true,
+          ".write" : "data.parent().child('admin').val() == auth.username"
+        },
+        "solictions" :{
+          ".read" : true,
+          ".write" : "data.parent().child('admin').val() == auth.username"
+        },
+        "approved" : {
+          ".read" : true,
+          ".write" : "auth.username == 'console'"
+        },
+        "description" : {
+          ".read" : true,
+          ".write" : "data.parent().child('admin').val() == auth.username"
+        },
+        "admin" : {
+          ".read" : "data.parent().child('admin').val() == auth.username",
+          ".write" : "data.parent().child('admin').val() == auth.username"
+        },
+        "title" : {
+          ".read" : true,
+          ".write" : "data.parent().child('admin').val() == auth.username"
+        }
+    }
+  }
+}
+}

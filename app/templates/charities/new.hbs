@@ -1,0 +1,32 @@
+<h2>Apply as a Charity</h2>
+<form {{action 'create' on='submit'}}>
+    <label>
+        Charity Title
+        {{input type="text" value=title}}
+    </label>
+    <label>
+        Charity Description
+        {{textarea value=description}}
+    </label>
+    <label>
+        Charity Image URL
+        {{input type="url" value=imageUrl}}
+    </label>
+    <label>
+        Charity Phone Number
+        {{input type="tel" value=phoneNumber}}
+    </label>
+    <label>
+        Charity Hours
+        {{textarea value=hours}}
+    </label>
+    <label>
+        Charity Address
+        {{textarea value=address}}
+    </label>
+    <label>
+        Charity Paypal Donation Email
+        {{input type="email" value=paypalEmail}}
+    </label>
+    <button type="submit">Create</button>
+</form>
