@@ -22,6 +22,7 @@ h1.logo {
 	position: relative;
 	margin: 0;
 	>i {
+		cursor: pointer;
 		text-align: center;
 		line-height: 50px;
 		font-size:18px;
@@ -39,7 +40,17 @@ h1.logo {
 		position: absolute;
 		right: 0px;
 		width: 250px;
-		margin-top: 7px;
+		margin-top: 0px;
+		border-top-left-radius: 0px;
+		border-top-right-radius: 0px;
+		border-top: 0;
+		ul li {
+			display: block;
+			margin-bottom: 15px;
+			&:first-child { margin-top: 5px; }
+			&:last-child { margin-bottom: 0px; }
+			a { font-size: 14px; }
+		}
 	}
 }
 
@@ -52,8 +63,7 @@ h1.logo {
 		margin-bottom: 15px; 
 	}
 	button.login { 
-		width: 100%;
-		margin-bottom: 15px; 
+		width: 100%; 
 	}
 }
 
@@ -88,7 +98,6 @@ button.cancel {
 div.input-wrapper {
 	text-align: left;
 	position: relative;
-	height: 40px;
 	&:after { 
 		display: block;
 		width: 0px;
@@ -100,12 +109,12 @@ div.input-wrapper {
 		font-family: $icon;
 	}
 	&.right:after {
-		right: 10px;
-		left: 0;
+		right: 25px;
+		left: auto;
 	}
 	&.left:after {
 		left: 10px;
-		right: 0;
+		right: auto;
 	}
 	&.password:after { content: "\f023"; }
 	&.user:after { content: "\f007"; }
@@ -141,12 +150,44 @@ div.input-wrapper {
 	}
 	&.right input { padding-right: 30px; padding-left: 10px; }
 	&.left input { padding-left: 30px; padding-right: 10px; }
+	textarea { 
+		font-size: 14px;
+		font-family: $sans;
+		color: $default;
+		background: $white;
+		border: 1px solid #e3e3e3;
+		border-top: 2px solid #e3e3e3;
+		-webkit-border-radius: 2px;
+		-moz-border-radius: 2px;
+		border-radius: 2px;
+		margin: 0;
+		height: 60px;
+		width: 100%;
+		padding-left: 10px;
+		padding-right: 20px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		outline: 0;
+		resize: none;
+		&::-webkit-input-placeholder { color: $purple; }
+		&:-moz-placeholder {  color: $purple;  }
+		&::-moz-placeholder { color: $purple; }
+		&:-ms-input-placeholder {  color: $purple; }
+		&:focus { 
+			&::-webkit-input-placeholder { color: #ccc; }
+			&:-moz-placeholder {  color: #ccc;  }
+			&::-moz-placeholder { color: #ccc; }
+			&:-ms-input-placeholder {  color: #ccc; }
+		}
+	}
+	&.tall { textarea { height: 100px; } }
 }
 
 .header-search {
 	float: right;
 	margin: 0;
 	>i {
+		cursor: pointer;
 		text-align: center;
 		line-height: 50px;
 		font-size:18px;
@@ -172,6 +213,16 @@ div.input-wrapper {
 			-moz-box-shadow: 0 0 4px rgba(black,.15);
 			box-shadow: 0 0 4px rgba(black,.15);
 		}
+	}
+}
+
+.styled-form {
+	label { 
+		display: block; 
+		margin-bottom: 20px;
+	}
+	.input-wrapper {
+		margin-top: 10px;
 	}
 }
 
@@ -232,11 +283,13 @@ section.solicitations {
 
 article.solicitation {
 	margin-bottom: 15px;
+	cursor: pointer;
 }
 
 .solicitation-options {
 	position: relative;
 	text-align: center;
+	cursor: default;
 	button { margin-bottom: 10px;}
 	p {
 		white-space: pre-line;

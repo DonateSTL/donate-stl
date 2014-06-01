@@ -9,12 +9,6 @@
                 {{#if auth.currentUser}}
                     <ul>
                         <li>
-                            <button {{action 'logout'}}>
-                                Log Out
-                                <small>({{auth.currentUser.email}})</small>
-                            </button>
-                        </li>
-                        <li>
                             {{#link-to 'user.edit' auth.currentUser}}
                                 Account
                                 <small>({{auth.currentUser.email}})</small>
@@ -32,13 +26,19 @@
                                 Apply as a Charity
                             {{/link-to}}
                         </li>
+                        <li>
+                            <button {{action 'logout'}}>
+                                Log Out
+                                <small>({{auth.currentUser.email}})</small>
+                            </button>
+                        </li>
                     </ul>
                 {{else}}
                     <form class="login-form" {{action 'login' on='submit'}}>
-                        <div class="input-wrapper user">
+                        <div class="input-wrapper user right">
                             {{input type="text" placeholder="Email Address" value=email}}
                         </div>
-                        <div class="input-wrapper password">
+                        <div class="input-wrapper password right">
                             {{input type="password" placeholder="Password" value=password}}
                         </div>
                         <button class="login" {{action 'login'}}>Log In / Sign Up</button>

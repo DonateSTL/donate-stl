@@ -1,28 +1,36 @@
+<section class="hero charity">
+    
 <h2>Apply as a Charity</h2>
-<form {{action 'create' on='submit'}}>
-    <label>
-        Charity Title
-        {{input type="text" value=title}}
-    </label>
-    <label>
-        Charity Description
-        {{textarea value=description}}
-    </label>
-    <label>
-        Charity Image URL
-        {{input type="url" value=imageUrl}}
-    </label>
-    <label>
-        Charity Phone Number
-        {{input type="tel" value=phoneNumber}}
-    </label>
-    <label>
-        Charity Address
-        {{textarea value=address}}
-    </label>
-    <label>
-        Charity Paypal Donation Email
-        {{input type="email" value=paypalEmail}}
-    </label>
-    <button type="submit">Create</button>
-</form>
+
+</section>
+<section class="solicitations wrapper clear">
+    <div class="card">    
+        <form {{action 'create' on='submit'}} class="styled-form">
+            <label>
+                Charity Title
+                <div class="input-wrapper">{{input type="text" value=title}}</div>
+            </label>
+            <label>
+                Charity Description
+                <div class="input-wrapper tall">{{textarea value=description}}</div>
+            </label>
+            <label>
+                Charity Image URL
+                <div class="input-wrapper">{{input type="url" value=imageUrl}}</div>
+            </label>
+            <label>
+                Charity Phone Number
+                <div class="input-wrapper">{{input type="tel" value=phoneNumber}}</div>
+            </label>
+            <label>
+                Charity Address
+                <div class="input-wrapper">{{textarea value=address}}</div>
+            </label>
+            <label>
+                Charity Paypal Donation Email
+                <div class="input-wrapper">{{input type="email" value=paypalEmail}}</div>
+            </label>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</section>
