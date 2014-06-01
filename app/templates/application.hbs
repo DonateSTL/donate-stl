@@ -8,12 +8,14 @@
             <div class="menu card">
                 {{#if auth.currentUser}}
                     <ul>
+                        {{!--
                         <li>
                             {{#link-to 'user.edit' auth.currentUser}}
                                 Account
                                 <small>({{auth.currentUser.email}})</small>
                             {{/link-to}}
                         </li>
+                        --}}
                         {{#each charity in auth.currentUser.charities}}
                             <li>
                                 {{#link-to 'charitiy.dashboard' charity}}
