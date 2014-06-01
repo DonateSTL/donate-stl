@@ -5,6 +5,7 @@ var Charity = DS.Model.extend({
     imageUrl: DS.attr('string', { defaultValue: '' }),
     isApproved: DS.attr('boolean', { defaultValue: false }),
     phoneNumber: DS.attr('string', { defaultValue: '' }),
+    hours: DS.attr('string', { defaultValue: '' }),
     address: DS.attr('string', { defaultValue: '' }),
     websiteUrl: DS.attr('string', { defaultValue: '' }),
     paypalEmail: DS.attr('string', { defaultValue: '' }),
