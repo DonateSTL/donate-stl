@@ -202,12 +202,13 @@ section.hero {
 	background: url(img/heroBG.jpg) center top;
 	background-size: cover;
 	position: relative;
-	height: 480px;
+	height: 420px;
 	padding: 50px 15px;
 	text-align:center;
 	color: $white;
 	p.welcome { margin: 0px 20px 20px;}
 	h4 { padding: 10px 0; line-height: 1.3em; font-weight: 600; font-size: 18px; text-transform: uppercase; letter-spacing: 1px; }
+    h4 .or-flourish { display: block; font-size: 0.8em; margin: 0.25em 0; }
 	.big-arrow { font-size: 65px; margin-top: 10px;}
 	a { color: $white; }
 	a.website-link {

@@ -9,11 +9,19 @@
                 {{#if auth.currentUser}}
                     <ul>
                         <li>
-                            <button {{action 'logout'}}>Log Out</button>
+                            <button {{action 'logout'}}>
+                                Log Out
+                                <small>({{auth.currentUser.email}})</small>
+                            </button>
                         </li>
+                        {{!--
                         <li>
-                            {{#link-to 'user.edit' user}}Account{{/link-to}}
+                            {{#link-to 'user.edit' auth.currentUser}}
+                                Account
+                                <small>({{auth.currentUser.email}})</small>
+                            {{/link-to}}
                         </li>
+                        --}}
                     </ul>
                 {{else}}
                     <form class="login-form" {{action 'login' on='submit'}}>
@@ -24,11 +32,13 @@
                             {{input type="password" placeholder="Password" value=password}}
                         </div>
                         <button class="login" {{action 'login'}}>Log In / Sign Up</button>
+                        {{!--
                         or log in with
                         <div class="clear social-login"> 
                             <button class="facebook"><i class="fa fa-facebook"></i>Facebook</button>
                             <button class="twitter"><i class="fa fa-twitter"></i>Twitter</button>
                         </div>
+                        --}}
                     </form>
                 {{/if}}
             </div>

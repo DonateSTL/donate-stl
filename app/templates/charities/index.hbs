@@ -1,29 +1,26 @@
 <section class="hero">
-    <p class="welcome">Hello, we are here to help you
-give away your ununsed items
-to St. Louis charities.</p>
+    <p class="welcome">St. Louis charities need donations, and you have resources. Find out which items are in need <em>right now</em> so you can help them make a real difference.</p>
 
-	<h4>Something Specific In mind?</h4>
 	<div class="input-wrapper search left">
-		{{input class="primary-search" type="search" value=search placeholder="Search all solicitations" action="query"}}
+		{{input class="primary-search" type="search" value=search placeholder="Search to donate a specific item" action="query"}}
 	</div>
 	<h4>
-		<br>or<br><br>
-		browse below to see what people need
+		<span class="or-flourish">or</span>
+		browse below to see what charities need <em>now</em>
 	</h4>
 	<i class="fa fa-arrow-circle-down big-arrow"></i>
 
 </section>
 <section class="solicitations wrapper clear">
 	{{#each charity in model}}
-	    	<div class="card-header clear">
-	    		<h3 class="card-header-title">{{charity.title}}</h3>
-	    		<div class="more">
-				    {{#link-to 'solicitations' charity}}
-				        more<i class="fa fa-arrow-circle-right"></i>
-				    {{/link-to}}
-	    		</div>
-	    	</div>
+            {{#link-to 'solicitations' charity tagName="div" class="card-header clear"}}
+                <h3 class="card-header-title">{{charity.title}}</h3>
+                <div class="more">
+                    {{#link-to 'solicitations' charity}}
+                        more<i class="fa fa-arrow-circle-right"></i>
+                    {{/link-to}}
+                </div>
+            {{/link-to}}
 		    {{#if charity.featuredSolicitation}}
 		        {{solicitation-summary solicitation=charity.featuredSolicitation}}
 		    {{/if}}

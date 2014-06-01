@@ -1,5 +1,5 @@
 
-     <article class="solicitation card">
+     <article class="solicitation card" {{action 'donate'}}>
         
         <div class="solicitation-options clear">
             <img class="solicitation-img" {{bind-attr src=solicitation.imageUrl}}>
@@ -64,7 +64,7 @@
                             <button class="big twitter"><i class="fa fa-twitter"></i><a href="http://TODO.example.com/">Tweet</a></button>
                         {{/if}}
                     {{/if}}
-                    <button class="big cancel"{{action 'cancel'}}>{{cancelText}}</button>
+                    <button class="big cancel"{{action 'cancel' bubbles=false}}>{{cancelText}}</button>
 
         {{else}}
             <div class="donate-init">

@@ -7,5 +7,12 @@ export default Ember.Route.extend({
         this.get('store').find('solicitation').then(function(solicitations){
             controller.set('content', solicitations);
         });
+    },
+    actions: {
+        willTransition: function(transition) {
+            if (transition.targetName !== 'search') {
+                this.controllerFor('search').set('searchQuery', '');
+            }
+        }
     }
 });
