@@ -14,7 +14,7 @@ var Charity = DS.Model.extend({
     solicitations: DS.hasMany('solicitation', { async: true }),
     // Computed Properties
     featuredSolicitation: Ember.computed('solicitations.@each', function() {
-        return this.get('solicitations.firstObject');
+        return this.get('solicitations').sortBy('priority').reverse().get('firstObject');
     })
 });
 
