@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="a99b77ae-53f5-4c32-8143-627b31e695f3" name="Default" comment="" />
+    <ignored path="dstl.iws" />
+=======
     <list default="true" id="63a22717-de73-4391-9e4d-7889d941432c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/application.hbs" afterPath="$PROJECT_DIR$/app/templates/application.hbs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/charities/index.hbs" afterPath="$PROJECT_DIR$/app/templates/charities/index.hbs" />
@@ -12,6 +16,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="donatestl.iws" />
+>>>>>>> 413d79ec91482d112361b595123165e066d371b3
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,6 +33,9 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
+<<<<<<< HEAD
+    <favorites_list name="dstl" />
+=======
     <favorites_list name="donatestl" />
   </component>
   <component name="FileEditorManager">
@@ -183,12 +191,20 @@
         </leaf>
       </split-second>
     </splitter>
+>>>>>>> 413d79ec91482d112361b595123165e066d371b3
   </component>
   <component name="FindManager">
     <FindUsagesManager>
       <setting name="OPEN_NEW_TAB" value="true" />
     </FindUsagesManager>
   </component>
+<<<<<<< HEAD
+  <component name="ProjectFrameBounds">
+    <option name="x" value="10" />
+    <option name="y" value="22" />
+    <option name="width" value="1260" />
+    <option name="height" value="705" />
+=======
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -237,6 +253,7 @@
     <option name="y" value="22" />
     <option name="width" value="1436" />
     <option name="height" value="878" />
+>>>>>>> 413d79ec91482d112361b595123165e066d371b3
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -264,10 +281,26 @@
       <sortByType />
     </navigator>
     <panes>
+<<<<<<< HEAD
+      <pane id="Scope" />
+=======
+>>>>>>> 413d79ec91482d112361b595123165e066d371b3
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
+<<<<<<< HEAD
+              <option name="myItemId" value="dstl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+=======
               <option name="myItemId" value="donatestl" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
@@ -590,6 +623,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="JavaScriptLanguageLevel" value="ES6" />
     <property name="SearchEverywhereHistoryKey" value="solicitations/index.js&#9;FILE&#9;file:///Users/kerrick/Developer/donate-stl/app/routes/solicitations/index.js&#10;solicitation.js&#9;FILE&#9;file:///Users/kerrick/Developer/donate-stl/app/models/solicitation.js&#10;charities.js&#9;FILE&#9;file:///Users/kerrick/Developer/donate-stl/app/routes/charities.js&#10;charity.js&#9;FILE&#9;file:///Users/kerrick/Developer/donate-stl/app/models/charity.js&#10;router&#9;FILE&#9;file:///Users/kerrick/Developer/donate-stl/app/router.js&#10;application.hbs&#9;FILE&#9;file:///Users/kerrick/Developer/donate-stl/app/templates/application.hbs&#10;readme&#9;FILE&#9;file:///Users/kerrick/Developer/donate-stl/README.md&#10;env&#9;FILE&#9;file:///Users/kerrick/Developer/donate-stl/config/environment.js&#10;router.js&#9;FILE&#9;file:///Users/kerrick/Developer/donate-stl/app/router.js&#10;app.js&#9;FILE&#9;file:///Users/kerrick/Developer/donate-stl/app/app.js&#10;application.js&#9;FILE&#9;file:///Users/kerrick/Developer/donate-stl/app/routes/application.js&#10;charitie/index.hbs&#9;FILE&#9;file:///Users/kerrick/Developer/donate-stl/app/templates/charities/index.hbs&#10;search&#9;FILE&#9;file:///Users/kerrick/Developer/donate-stl/app/controllers/search.js&#10;charity.hbs&#9;FILE&#9;file:///Users/kerrick/Developer/donate-stl/app/templates/charity.hbs&#10;solicitations/index.hbs&#9;FILE&#9;file:///Users/kerrick/Developer/donate-stl/app/templates/solicitations/index.hbs&#10;charities/index.hbs&#9;FILE&#9;file:///Users/kerrick/Developer/donate-stl/app/templates/charities/index.hbs&#10;summary.hbs&#9;FILE&#9;file:///Users/kerrick/Developer/donate-stl/app/templates/components/solicitation-summary.hbs&#10;app.scss&#9;FILE&#9;file:///Users/kerrick/Developer/donate-stl/app/styles/app.scss&#10;routes/index&#9;FILE&#9;file:///Users/kerrick/Developer/donate-stl/app/routes/index.js&#10;initializers/.js&#9;FILE&#9;file:///Users/kerrick/Developer/donate-stl/app/initializers/firebase-auth2.js&#10;message.js&#9;FILE&#9;file:///Users/kerrick/Developer/donate-stl/app/models/message.js&#10;user.js&#9;FILE&#9;file:///Users/kerrick/Developer/donate-stl/app/models/user.js&#10;index.html&#9;FILE&#9;file:///Users/kerrick/Developer/donate-stl/app/index.html&#10;routes/appl&#9;FILE&#9;file:///Users/kerrick/Developer/donate-stl/app/routes/application.js" />
+>>>>>>> 413d79ec91482d112361b595123165e066d371b3
   </component>
   <component name="RunManager">
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
@@ -638,13 +672,43 @@
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< HEAD
+      <changelist id="a99b77ae-53f5-4c32-8143-627b31e695f3" name="Default" comment="" />
+      <created>1401635463268</created>
+      <updated>1401635463268</updated>
+=======
       <changelist id="63a22717-de73-4391-9e4d-7889d941432c" name="Default" comment="" />
       <created>1401518786737</created>
       <updated>1401518786737</updated>
+>>>>>>> 413d79ec91482d112361b595123165e066d371b3
     </task>
     <servers />
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
+    <frame x="10" y="22" width="1260" height="705" extended-state="0" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+=======
     <frame x="0" y="22" width="1436" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
@@ -671,6 +735,7 @@
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.md" />
   </component>
+>>>>>>> 413d79ec91482d112361b595123165e066d371b3
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
       <collection />
@@ -690,6 +755,8 @@
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
+<<<<<<< HEAD
+=======
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/templates/application.hbs">
       <provider selected="true" editor-type-id="text-editor">
@@ -1101,5 +1168,6 @@
       </provider>
     </entry>
   </component>
+>>>>>>> 413d79ec91482d112361b595123165e066d371b3
 </project>
 
