@@ -12,7 +12,7 @@
 
 </section>
 <section class="solicitations wrapper clear">
-	{{#each charity in model}}
+	{{#each charity in approvedCharities}}
             {{#link-to 'solicitations' charity tagName="div" class="card-header clear"}}
                 <h3 class="card-header-title">{{charity.title}}</h3>
                 <div class="more">

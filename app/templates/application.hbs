@@ -14,14 +14,24 @@
                                 <small>({{auth.currentUser.email}})</small>
                             </button>
                         </li>
-                        {{!--
                         <li>
                             {{#link-to 'user.edit' auth.currentUser}}
                                 Account
                                 <small>({{auth.currentUser.email}})</small>
                             {{/link-to}}
                         </li>
-                        --}}
+                        {{#each charity in auth.currentUser.charities}}
+                            <li>
+                                {{#link-to 'charitiy.dashboard' charity}}
+                                    Manage {{charity.title}}
+                                {{/link-to}}
+                            </li>
+                        {{/each}}
+                        <li>
+                            {{#link-to 'charities.new'}}
+                                Apply as a Charity
+                            {{/link-to}}
+                        </li>
                     </ul>
                 {{else}}
                     <form class="login-form" {{action 'login' on='submit'}}>

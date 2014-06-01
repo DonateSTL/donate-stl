@@ -1,4 +1,4 @@
-export default Ember.Controller.extend({
+export default Ember.ArrayController.extend({
     needs: ['application'],
     searchQuery: Ember.computed.alias('controllers.application.searchQuery'),
     filteredContent: Ember.arrayComputed('content', 'searchQuery', {

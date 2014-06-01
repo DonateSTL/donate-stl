@@ -1,4 +1,6 @@
-export default Ember.Controller.extend({
+export default Ember.ArrayController.extend({
+    sortProperties: ['title'],
+    approvedCharities: Ember.computed.filterBy('arrangedContent', 'isApproved'),
     searchQuery: '',
     searchQueryChanged: Ember.observer('searchQuery', function() {
         if (this.get('searchQuery') === '') {

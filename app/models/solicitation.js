@@ -8,6 +8,7 @@ var Solicitation = DS.Model.extend({
     isOpen: DS.attr('boolean', { defaultValue: true }),
     createDate: DS.attr('date', { defaultValue: '' }),
     updateDate: DS.attr('date', { defaultValue: '' }),
+    priority: DS.attr('number', { defaultValue: 0 }),
     // Relationships
     charity: DS.belongsTo('charity', { async: true })
 });
